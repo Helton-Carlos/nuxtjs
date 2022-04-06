@@ -5,7 +5,7 @@
             <div class="frente">
                 <h3>Encontre as melhores ofertas.</h3>
                 <h2>Turistando EM
-                <br>  MACEIÓ- AL</h2>
+                <br>MACEIÓ- AL</h2>
                 <p>A PARTIR DE:</p>
                 <div class="sh">
                     <span>R$</span>

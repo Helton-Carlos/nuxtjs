@@ -2,16 +2,16 @@
 <div>
   <Header />
   <Main />
-  <Pacotes />
+  <PacotesIndex />
 </div>
 </template>
 
 <script>
 import Header from "~/components/Header.vue";
 import Main from "~/components/Main.vue";
-import Pacotes from '~/components/Pacotes.vue';
+import PacotesIndex from '~/components/PacotesIndex.vue';
 export default {
-  components: { Header, Main, Pacotes },
+  components: { Header, Main, PacotesIndex },
   name: "IndexPage",
 };
 </script>

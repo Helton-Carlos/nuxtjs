@@ -2,29 +2,32 @@
   <section id="pacotes">
     <div class="container-pacotes">
       <div class="subtitulo">
-        <img src="../static/Assets//bg.png" alt="PACOTE" />
+        <img src="~/static/Assets//bg.png" alt="PACOTE" />
         <h2>PACOTE</h2>
       </div>
 
       <div class="container-boxes">
-        <div v-for="viagem in viagens" :key="viagem.id" class="box">
-          <img :src="viagem.img" alt="viagem.id" width="300px" />
-
+        <div v-for="viagem in this.viagens" :key="viagem.id" class="box">
+          <img
+            :src="require(`../static/Assets/${viagem.img}`)"
+            alt="viagem.id"
+            width="300px"
+          />
           <div class="box-texto">
             <h3>{{ viagem.id }}</h3>
             <p>Diárias a partir de:</p>
             <h3>{{ viagem.preco }}</h3>
             <span>
-              <img src="../static/Assets/estrela.png" alt="estrela" width="20px" />
-              <img src="../static/Assets/estrela.png" alt="estrela" width="20px" />
-              <img src="../static/Assets/estrela.png" alt="estrela" width="20px" />
-              <img src="../static/Assets/estrela.png" alt="estrela" width="20px" />
+              <img src="~/static/Assets/estrela.png" alt="estrela" width="20px" />
+              <img src="~/static/Assets/estrela.png" alt="estrela" width="20px" />
+              <img src="~/static/Assets/estrela.png" alt="estrela" width="20px" />
+              <img src="~/static/Assets/estrela.png" alt="estrela" width="20px" />
             </span>
             <div class="diaria">
-              <img src="../static/Assets/sol.png" alt="diaria" />
+              <img src="~/static/Assets/sol.png" alt="diaria" />
               <p>{{ viagem.diaria }} DIÁRIAS</p>
 
-              <img src="../static/Assets/cafe.png" alt="cafe" />
+              <img src="~/static/Assets/cafe.png" alt="cafe" />
               <p>{{ viagem.cafe }}</p>
             </div>
           </div>
@@ -39,20 +42,51 @@
 export default {
   data() {
     return {
-      viagens: [],
+      viagens: [
+        {
+          id: "OURO PRETO-MG",
+          img: "ouro-preto.png",
+          preco: "R$2.534,50",
+          diaria: 3,
+          cafe: "CAFÉ DA MANHÃ",
+        },
+        {
+          id: "GRAMADO-RS",
+          img: "gramado.png",
+          preco: "R$3.585,00",
+          diaria: 3,
+          cafe: "CAFÉ DA MANHÃ",
+        },
+        {
+          id: "MARAGOGI-AL",
+          img: "maragogi.png",
+          preco: "R$1.250,00",
+          diaria: 2,
+          cafe: "CAFÉ DA MANHÃ",
+        },
+        {
+          id: "RECIFE-PE",
+          img: "recife.png",
+          preco: "R$2.600,00",
+          diaria: 3,
+          cafe: "CAFÉ DA MANHÃ",
+        },
+        {
+          id: "TERESINA-PI",
+          img: "teresina.png",
+          preco: "R$1.250,00",
+          diaria: 2,
+          cafe: "CAFÉ DA MANHÃ",
+        },
+        {
+          id: "VITÓRIA-ES",
+          img: "vitoria.png",
+          preco: "R$3.125,00",
+          diaria: 3,
+          cafe: "CAFÉ DA MANHÃ",
+        },
+      ],
     };
-  },
-  methods: {
-    fetchViagens() {
-      fetch("../api/viagens.json")
-        .then((r) => r.json())
-        .then((r) => {
-          this.viagens = r;
-        });
-    },
-  },
-  created() {
-    this.fetchViagens();
   },
 };
 </script>
