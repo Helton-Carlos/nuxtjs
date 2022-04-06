@@ -5,9 +5,8 @@
         <img src="~/static/Assets//bg.png" alt="PACOTE" />
         <h2>PACOTE</h2>
       </div>
-
       <div class="container-boxes">
-        <div v-for="viagem in this.viagens" :key="viagem.id" class="box">
+        <div v-for="viagem in viagens" :key="viagem.id" class="box">
           <img
             :src="require(`../static/Assets/${viagem.img}`)"
             alt="viagem.id"
@@ -88,6 +87,7 @@ export default {
       ],
     };
   },
+
 };
 </script>
 

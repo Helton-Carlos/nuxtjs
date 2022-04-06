@@ -3,31 +3,17 @@
     <div class="container-header">
       <div class="logo">
         <nuxt-link to="/">
-          <img src="../static/Assets/tURISTANDO.png" alt="logo" /></nuxt-link
-        >
+          <img src="../static/Assets/tURISTANDO.png" alt="logo"
+        /></nuxt-link>
       </div>
 
       <nav class="menu-desk">
         <ul>
-          <li>
-            <img src="img/bagagem.png" alt="bagagem" /><nuxt-link to="/pacotes"
-              >Pacote</nuxt-link
-            >
-          </li>
-          <li>
-            <img src="img/jato.png" alt="aviao" /><nuxt-link to="/passeios"
-              >Passeios</nuxt-link
-            >
-          </li>
-          <li>
-            <img src="img/presente.png" alt="presente" /><nuxt-link to="/promocao"
-              >Promoções</nuxt-link
-            >
-          </li>
-          <li>
-            <img src="img/telefone.png" alt="telefone" /><nuxt-link to="/contato"
-              >Contato</nuxt-link
-            >
+          <li v-for="objRotas in rotas" :key="objRotas">
+            <img
+              :src="require(`../static/Assets/${objRotas.img}.png`)"
+              alt="bagagem"
+            /><nuxt-link :to="objRotas.rota">{{ objRotas.nome }}</nuxt-link>
           </li>
         </ul>
       </nav>
@@ -36,7 +22,18 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      rotas: [
+        { img: "bagagem", rota: "/pacotes", nome: "Pacotes" },
+        { img: "jato", rota: "/passeios", nome: "Passeios" },
+        { img: "presente", rota: "/promocao", nome: "Promoções" },
+        { img: "telefone", rota: "/contato", nome: "Contato" },
+      ],
+    };
+  },
+};
 </script>
 
 <style>
