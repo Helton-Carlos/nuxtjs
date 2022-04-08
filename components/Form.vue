@@ -2,7 +2,7 @@
   <section id="contato">
     <div class="container-contato">
       <div class="subtitulo">
-        <img src="~/static/Assets/phone.png" alt="telefone" />
+        <img src="img/phone.png" alt="telefone" />
         <h2>CONTATO</h2>
       </div>
 
@@ -23,7 +23,7 @@
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3933.411399095815!2d-35.707896885208626!3d-9.645844593094461!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70145b7c4226bdf%3A0xf03d8e7211702f12!2sR.%20Banc%C3%A1rio%20Jos%C3%A9%20Farias%20de%20Almeida%20-%20Jati%C3%BAca%2C%20Macei%C3%B3%20-%20AL!5e0!3m2!1spt-BR!2sbr!4v1611963099547!5m2!1spt-BR!2sbr"
           width="600"
-          height="410"
+          height="450"
           frameborder="0"
           style="border: 0"
           allowfullscreen=""

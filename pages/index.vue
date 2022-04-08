@@ -6,7 +6,8 @@
     <PasseiosIndex />
     <Newslater />
     <PromocaoIndex />
-    <FormMap />
+    <Form />
+    <RodaPe />
   </div>
 </template>
 
@@ -16,10 +17,20 @@ import Main from "~/components/Main.vue";
 import Newslater from "~/components/Newslater.vue";
 import PacotesIndex from "~/components/PacotesIndex.vue";
 import PasseiosIndex from "~/components/PasseiosIndex.vue";
-import PromocaoIndex from '~/components/PromocaoIndex.vue';
-import FormMap from '~/components/FormMap.vue';
+import PromocaoIndex from "~/components/PromocaoIndex.vue";
+import Form from "~/components/Form.vue";
+import RodaPe from "~/components/RodaPe.vue";
 export default {
-  components: { Header, Main, PacotesIndex, PasseiosIndex, Newslater, PromocaoIndex, FormMap },
+  components: {
+    Header,
+    Main,
+    PacotesIndex,
+    PasseiosIndex,
+    Newslater,
+    PromocaoIndex,
+    Form,
+    RodaPe,
+  },
   name: "IndexPage",
   asyncData() {
     console.log("hey");
