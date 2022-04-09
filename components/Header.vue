@@ -17,6 +17,7 @@
           </li>
         </ul>
       </nav>
+     <nuxt-link to="/login" class="button-login">Login</nuxt-link>
     </div>
   </header>
 </template>
@@ -55,6 +56,14 @@ body {
 header {
   background-color: #0f195b;
   color: #fff;
+}
+.button-login {
+  background-color: #fc00a8;
+  color: #ffffff;
+  padding: 8px 25px;
+  border: none;
+  border-radius: 20px;
+  margin: 0px 20px;
 }
 .container-header {
   max-width: 80%;
